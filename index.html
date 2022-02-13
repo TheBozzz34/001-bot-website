@@ -92,14 +92,15 @@ img {
       window.location.replace("https://discord.com/api/oauth2/authorize?client_id=784544338956386365&permissions=274877975552&scope=bot");
     }
       
-    function httpGet(theUrl)
+    function httpGet("https://nekos.life/api/neko")
     {
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
         xmlHttp.send( null );
         return xmlHttp.responseText;
+        console.log(xmlHttp.responseText);
     }
-    console.log(xmlHttp.responseText);
+    
     </script>
   
   
