@@ -92,9 +92,20 @@ img {
       window.location.replace("https://discord.com/api/oauth2/authorize?client_id=784544338956386365&permissions=274877975552&scope=bot");
     }
       
-    
+    function httpGet(theUrl)
+    {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+        xmlHttp.send( null );
+        return xmlHttp.responseText;
+    }
+    console.log(xmlHttp.responseText);
     </script>
+  
+  
   <link rel=”icon” type=“image/x-icon” href=”/favicon.ico">
+                                                          
+                                                          
   <title>001 Discord Bot</title>
 </head>
 
@@ -104,9 +115,7 @@ img {
   <div class="image-cropper">
                             
       <img src="/zero.jpg" class="rounded">                      
-  <!--
-      <img src="https://images-ext-2.discordapp.net/external/bcG2oKG1rCyTe63xaR6AJDSzjF_zuse-w_qrK8r_u8Y/https/cdn.discordapp.com/avatars/784544338956386365/58062a1155cd6e5ca7d36d7f47ead678.png" alt="Italian Trulli" class="rounded">                      
-   -->                         
+                         
   </div>
   
   </br>
