@@ -94,21 +94,13 @@ img {
   <script>
     function setLocation() {
       window.location.replace("https://discord.com/api/oauth2/authorize?client_id=784544338956386365&permissions=274877975552&scope=bot");
-    }
-      
-    const url = "https://nekos.life/api/neko";
-   
-    
-    </script>
-  
-  
-  <link rel=”icon” type=“image/x-icon” href=”/favicon.ico">
-                                                          
-                                                          
+    }  
+    </script>                                                                    
   <title>001 Discord Bot</title>
 </head>
 
   
+
 <div class="centerDiv">
 <p> 
   <div class="image-cropper">
@@ -123,6 +115,24 @@ img {
 <p class="infoText">
    Wowie! A Discord Bot!              
 </p>
+
+<script>
+  axios.get("https://nekos.life/api/neko")
+  .then(response => {
+    // access parsed JSON response data using response.data field
+    data = response.data
+    console.log(data.neko)
+    
+  })
+  .catch(error => {
+    if (error.response) {
+      //get HTTP error code
+      console.log(error.reponse.status)
+    } else {
+      console.log(error.message)
+    }
+  })
+</script>
                                                                               
                                                                               
                                                                               
