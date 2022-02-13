@@ -65,11 +65,18 @@ body {
 
 </style>
 
+<head>
+  <script>
+    function setLocation() {
+      var t = document.createTextNode("Redirecting...");
+      document.getElementById("button-1").appendChild(t);
+    }
+</head>
 
   
 <div class="centerDiv">
 <p>
-  <button class="button-1" role="button">Button 1</button>
+  <button id="button-1" class="button-1" role="button" onclick="setLocation()">Button 1</button>
 </p>
 </div>
 
