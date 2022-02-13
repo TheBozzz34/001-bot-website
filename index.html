@@ -101,7 +101,7 @@ img {
 
   
 
-<div class="centerDiv">
+<div class="centerDiv" id="mainDiv">
 <p> 
   <div class="image-cropper">
                             
@@ -121,7 +121,12 @@ img {
   .then(response => {
     // access parsed JSON response data using response.data field
     data = response.data
-    console.log(data.neko)
+    var imgN = document.createElement("img");
+    imgN.src = data.neko;
+
+    var div = document.getElementById("mainDiv");
+    div.appendChild(imgN);
+    //block.setAttribute("style", "text-align:center");
     
   })
   .catch(error => {
@@ -133,12 +138,7 @@ img {
     }
   })
   
-  var imgN = document.createElement("img");
-  imgN.src = data.neko;
-
-  var div = document.getElementById("x");
-  div.appendChild(imgN);
-    //block.setAttribute("style", "text-align:center");
+  
 
 </script>
                                                                               
