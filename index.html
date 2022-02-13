@@ -3,6 +3,11 @@
 
 <style>
 
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+  
 .center {
 border: 5px solid #FFFF00;
 text-align: center;
@@ -13,8 +18,8 @@ align-items: center;
 flex-direction: column;
 padding-top: 2rem;
 padding-bottom: 2rem;
-height: 100px;
-width: 500px;
+width: var(--card-width);
+height: var(--card-height);
 }
 body {
   background-image: url('https://www.spaceartemis.com/wp-content/uploads/minimalizm-gradient-background.jpg');
