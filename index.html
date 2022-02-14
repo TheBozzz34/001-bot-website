@@ -2,8 +2,11 @@
 <html>
 <head>
   <script>
-    function setLocation() {
+    function setLocation0() {
       window.location.replace("https://discord.com/api/oauth2/authorize?client_id=784544338956386365&permissions=274877975552&scope=bot");
+    }
+    function setLocation1() {
+      location.reload();
     }  
     </script>                                                                    
   <title>001 Discord Bot</title>
@@ -93,11 +96,15 @@ img {
       <img src="/zero.jpg" class="rounded">                                               
   </div>
   </br>
-  <button id="button-1" class="button-1" role="button" onclick="setLocation()">Invite</button>                                                                   
+  <button id="button-1" class="button-1" role="button" onclick="setLocation0()">Invite</button>
+  </br>
+  <button id="button-1" class="button-1" role="button" onclick="setLocation1()">Refresh Page</button>
 </p>
+<!--
 <p class="infoText">
    Wowie! A Discord Bot!              
 </p>
+-->
 <script>
   axios.get("https://nekos.life/api/neko")
   .then(response => {
