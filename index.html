@@ -164,7 +164,7 @@ img {
     
       var guilds = JSON.stringify(response.data.guildCount);
       var guildCount = document.getElementById('guildCount');
-      var statsElement = '<p class="infoText">Currently in' + guilds + 'servers</p>';
+      var statsElement = '<p class="infoText">Currently in ' + guilds + ' servers</p>';
       guildCount.innerHTML = statsElement;                
       console.log(guilds);
     })
