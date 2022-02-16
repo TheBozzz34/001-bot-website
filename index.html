@@ -138,7 +138,12 @@ img {
   <span class="spoiler2">n!neko</span>
 </br>
   <span class="spoiler2">n!lewdneko</span>
+</b>
+---- Stats ---
+</br>
+<div id="guildCount"></br>
 </p>
+
 
 
 
@@ -156,17 +161,16 @@ img {
 
     axios(config)
     .then(function (response) {
-      console.log(JSON.stringify(response.data));
+    
       var guilds = JSON.stringify(response.data.guildCount);
+      var guildCount = document.getElementbyID("guildCount");
+      guildCount.innerHTML = '<p>"Currently in ${guilds} servers"</p>';                
       console.log(guilds);
     })
     .catch(function (error) {
       console.log(error);
     });
-    
-    var guildCount = document.createElement("div");
-    guildCount.innerHTML = '<p>"Currently in ${guilds} servers"</p>';                
-    document.body.appendChild(guildCount);  
+      
 
 </script>
  
