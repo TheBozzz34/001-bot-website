@@ -161,9 +161,10 @@ img {
     .catch(function (error) {
       console.log(error);
     });
-    //var guildCount = document.createElement("div");
-   // guildCount.innerHTML = '<p>"Currently in ${guilds} servers"</p>';                
-    //document.appendChild(guildCount);  
+    var guilds = JSON.stringify(response.data).guildCount;
+    var guildCount = document.createElement("div");
+    guildCount.innerHTML = '<p>"Currently in ${guilds} servers"</p>';                
+    document.appendChild(guildCount);  
 
 </script>
  
