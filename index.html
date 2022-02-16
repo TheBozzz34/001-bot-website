@@ -140,7 +140,6 @@ img {
   <span class="spoiler2">n!lewdneko</span>
 </br>
 ---- Stats ---
-</br>
 <div id="guildCount"></br>
 </p>
 
@@ -163,8 +162,9 @@ img {
     .then(function (response) {
     
       var guilds = JSON.stringify(response.data.guildCount);
+      var guildsPretty = guilds.replace(/['"]+/g, '');
       var guildCount = document.getElementById('guildCount');
-      var statsElement = '<p class="infoText">Currently in ' + guilds + ' servers</p>';
+      var statsElement = '<p class="infoText">Currently in ' + guildsPretty + ' servers</p>';
       guildCount.innerHTML = statsElement;                
       console.log(guilds);
     })
