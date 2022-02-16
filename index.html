@@ -141,18 +141,16 @@ img {
 </p>
 
 
-<!--
+
 <script>
-  axios.get("https://nekos.life/api/neko")
+  axios.get("'https://getpantry.cloud/apiv1/pantry/2ba3d828-ee55-4c53-8e8c-8bf75cf44c5d/basket/guildCount")
   .then(response => {
     data = response.data
-    var imgN = document.createElement("img");
-    imgN.src = data.neko;
-    var div = document.getElementById("mainDiv");
-    imgN.setAttribute("style", "height: 400px;");
-    imgN.setAttribute("width", "height: 50px;");
-    imgN.setAttribute("border", "border: 5px solid #5539cc;");
-    div.appendChild(imgN);    
+    var guildCount = document.createElement("p");
+    guildCount.innerHtml = "Currently in " + data.guildCount + " servers";
+    document.appendChild(guildCount);  
+    
+        
   })
   .catch(error => {
     if (error.response) {
@@ -162,7 +160,7 @@ img {
     }
   })
 </script>
- -->
+ 
 
 <p class="footer">Created by Sada\n#9264<!--, All images are from <a href="https:/nekos.life">Nekos.Life</a> I take no reponsibilty for these images --> </p>
 </div>
