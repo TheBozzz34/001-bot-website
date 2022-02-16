@@ -157,7 +157,7 @@ img {
     axios(config)
     .then(function (response) {
       console.log(JSON.stringify(response.data));
-      var guilds = JSON.stringify(response.data).guildCount;
+      var guilds = JSON.stringify(response.data.guildCount);
       console.log(guilds);
     })
     .catch(function (error) {
