@@ -149,21 +149,21 @@ img {
       method: 'get',
       url: 'https://getpantry.cloud/apiv1/pantry/2ba3d828-ee55-4c53-8e8c-8bf75cf44c5d/basket/guildCount',
       headers: { 
-          'Content-Type': 'application/json'
+        'Content-Type': 'application/json'
       },
       data : data
-      };
+    };
 
-      axios(config)
-      .then(function (response) {
-        console.log(JSON.stringify(response.data));
-      })
-      .catch(function (error) {
-          console.log(error);
-      });
-    var guildCount = document.createElement("div");
-    guildCount.innerHTML = '<p>"Currently in ${guilds} servers"</p>';                
-    document.appendChild(guildCount);  
+    axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    //var guildCount = document.createElement("div");
+   // guildCount.innerHTML = '<p>"Currently in ${guilds} servers"</p>';                
+    //document.appendChild(guildCount);  
     
         
   })
