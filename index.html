@@ -163,7 +163,7 @@ img {
     .then(function (response) {
     
       var guilds = JSON.stringify(response.data.guildCount);
-      var guildCount = document.getElementbyId("guildCount");
+      var guildCount = document.getElementById('guildCount');
       guildCount.innerHTML = '<p>"Currently in ${guilds} servers"</p>';                
       console.log(guilds);
     })
