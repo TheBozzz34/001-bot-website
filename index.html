@@ -146,8 +146,10 @@ img {
   axios.get("'https://getpantry.cloud/apiv1/pantry/2ba3d828-ee55-4c53-8e8c-8bf75cf44c5d/basket/guildCount")
   .then(response => {
     data = response.data
-    var guildCount = document.createElement("p");
-    guildCount.innerHtml = "Currently in " + data.guildCount + " servers";
+    guilds = data.guildCount;
+    console.log(guilds);
+    var guildCount = document.createElement("div");
+    guildCount.innerHTML = '<p>"Currently in ${guilds} servers"</p>';                
     document.appendChild(guildCount);  
     
         
